@@ -1,0 +1,19 @@
+{
+  "todos": [
+    {
+      "title" : "Angular",
+      "id": "c7051c2c-9f9e-452b-999f-1ce412415545",
+      "completed" : false
+    },
+    {
+      "title" : "Vue.js",
+      "id": "82ebaa6d-95b9-4771-ac51-6570ab7bd1ac",
+      "completed" : false
+    },
+    {
+      "title" : "React",
+      "id": "3099525c-e0e7-4e68-8f0b-580bde787b7a",
+      "completed" : true
+    }
+  ]
+}
