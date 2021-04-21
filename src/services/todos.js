@@ -17,4 +17,8 @@ const _delete = async id => {
   return id
 }
 
-export default { getAll, update, delete: _delete }
+const add = async newTodo => {
+  const response = await axios.post(baseUrl, newTodo)
+  return response.data
+}
+export default { getAll, update, delete: _delete, add }

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { uuid } from 'uuidv4'
 
 import todoService from '../services/todos'
 
@@ -30,5 +31,16 @@ export default function useTodo() {
     })
   }
 
-  return { todos, toggleTodo, deleteTodo }
+  const addTodo = todo => {
+    const newTodo = {
+      title: todo,
+      completed: false,
+      id: uuid()
+    }
+    return todoService.add(newTodo).then(addedTodo => {
+      setTodos([addedTodo].concat(todos))
+    })
+  }
+
+  return { todos, toggleTodo, deleteTodo, addTodo }
 }
